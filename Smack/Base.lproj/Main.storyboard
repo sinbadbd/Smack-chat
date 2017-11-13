@@ -273,8 +273,7 @@
                                 <rect key="frame" x="366" y="37" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
                                 <connections>
-                                    <action selector="closePressed:" destination="I2U-g8-4ql" eventType="touchUpInside" id="gjM-KQ-gqx"/>
-                                    <action selector="clsPresses:" destination="SSi-tR-TEY" eventType="touchUpInside" id="xwi-Eg-p7N"/>
+                                    <action selector="CLoseCreateAccount:" destination="SSi-tR-TEY" eventType="touchUpInside" id="FNd-QS-cQy"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ope-Ja-28m">
@@ -339,17 +338,28 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-PS-X1i">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EE3-fv-kSu">
                                 <rect key="frame" x="82" y="632" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="0gV-aE-BYi"/>
-                                    <constraint firstAttribute="height" constant="50" id="aOn-fg-VJZ"/>
-                                </constraints>
-                                <state key="normal" title="Create an Account">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IHf-fa-LNU">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-PS-X1i">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="0gV-aE-BYi"/>
+                                                    <constraint firstAttribute="height" constant="50" id="aOn-fg-VJZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Create an Account">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iyB-9w-Yec">
                                 <rect key="frame" x="122.66666666666669" y="321" width="169" height="158"/>
                                 <subviews>
@@ -385,27 +395,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xpx-y8-D7f" firstAttribute="top" secondItem="kTR-PS-X1i" secondAttribute="bottom" constant="54" id="0AC-7Z-0Gx"/>
                             <constraint firstItem="iyB-9w-Yec" firstAttribute="top" secondItem="ppJ-J2-dKJ" secondAttribute="bottom" constant="37" id="Gfw-eU-qqU"/>
                             <constraint firstItem="ppJ-J2-dKJ" firstAttribute="top" secondItem="Ope-Ja-28m" secondAttribute="bottom" constant="55.670000000000002" id="Qqe-Nj-hoW"/>
                             <constraint firstItem="oRm-0F-MpO" firstAttribute="top" secondItem="Kr0-sb-Pov" secondAttribute="bottom" constant="17" id="ZTs-Wf-xI0"/>
                             <constraint firstItem="Ope-Ja-28m" firstAttribute="top" secondItem="Kr0-sb-Pov" secondAttribute="bottom" constant="58" id="eCL-dV-ELF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oRm-0F-MpO" secondAttribute="trailing" id="hqT-xS-Qkp"/>
                             <constraint firstItem="ppJ-J2-dKJ" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="iRr-Cf-raO"/>
-                            <constraint firstItem="kTR-PS-X1i" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="mp3-Mh-uva"/>
                             <constraint firstItem="Ope-Ja-28m" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="qTF-HX-TAj"/>
                             <constraint firstItem="iyB-9w-Yec" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="sd2-4B-aBl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="closeAccPressed" destination="oRm-0F-MpO" id="te8-J9-f5X"/>
-                        <segue destination="CD4-he-fZY" kind="unwind" identifier="unwineToChannel" unwindAction="prepareForUnwindWithSegue:" id="s4F-Ez-iHf"/>
+                        <segue destination="CD4-he-fZY" kind="unwind" identifier="unwineToChannel" unwindAction="prepareForUnwindWithSegue:" id="tIf-xO-o5X"/>
                     </connections>
                 </viewController>
                 <exit id="CD4-he-fZY" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP4-pX-XIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="-268"/>
+            <point key="canvasLocation" x="2489.8550724637685" y="-268.20652173913044"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="Ig4-yn-IXw">

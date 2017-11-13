@@ -18,12 +18,25 @@ class CreateAccountVC: UIViewController {
 
     @IBOutlet weak var closeAccPressed: UIButton!
     
-    @IBAction func clsPressed(_ sender: Any) {
-         dismiss(animated: true, completion: nil)
+    @IBAction func CLoseCreateAccount(_ sender: Any) {
+        performSegue(withIdentifier: UNWINE, sender: nil)
     }
     
-//    @IBAction func closePressed(_ sender: Any) {
+//    @IBAction func closeCreateAccont(_ sender: Any) {
 //        
+//        performSegue(withIdentifier: UNWINE, sender: nil)
+//        
+//        print("gi")
+//    }
+//    
+    
+    
+//    @IBAction func clsPressed(_ sender: Any) {
+//       performSegue(withIdentifier: UNWINE , sender: nil)
+//    }
+//
+//    @IBAction func closePressed(_ sender: Any) {
+//
 //        dismiss(animated: true, completion: nil)
 //    }
     
