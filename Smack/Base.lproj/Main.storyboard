@@ -355,6 +355,9 @@
                                                 <state key="normal" title="Create an Account">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="CreateAccount:" destination="SSi-tR-TEY" eventType="touchUpInside" id="e4k-tJ-fur"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -378,6 +381,7 @@
                                         </state>
                                         <connections>
                                             <action selector="createAccountBtnPressed:" destination="I2U-g8-4ql" eventType="touchUpInside" id="Se4-sS-tgN"/>
+                                            <action selector="pickAavatarPressed:" destination="SSi-tR-TEY" eventType="touchUpInside" id="RPs-EF-YZG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAc-Gi-gEh">
@@ -388,6 +392,7 @@
                                         </state>
                                         <connections>
                                             <action selector="createAccountBtnPressed:" destination="I2U-g8-4ql" eventType="touchUpInside" id="eg3-cX-npt"/>
+                                            <action selector="pickBGColorPressed:" destination="SSi-tR-TEY" eventType="touchUpInside" id="VsE-BQ-g98"/>
                                         </connections>
                                     </button>
                                 </subviews>
