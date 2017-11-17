@@ -176,6 +176,9 @@
                                         <color key="textColor" red="0.17254901959999999" green="0.53305983199999996" blue="0.7706699346" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="UsernameText:" destination="5Qt-nc-10W" eventType="editingDidEnd" id="rAs-PK-ehW"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-Es-OSM">
                                         <rect key="frame" x="0.0" y="32" width="250" height="2"/>
@@ -411,6 +414,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UserEmailText" destination="aKo-9Z-dtE" id="4lO-Us-Zaa"/>
+                        <outlet property="UserPasswordText" destination="opZ-14-x89" id="uqM-Gf-Jvl"/>
+                        <outlet property="UsernameText" destination="WpJ-nL-Ynw" id="6VS-oa-Fa3"/>
                         <segue destination="CD4-he-fZY" kind="unwind" identifier="unwineToChannel" unwindAction="prepareForUnwindWithSegue:" id="tIf-xO-o5X"/>
                     </connections>
                 </viewController>

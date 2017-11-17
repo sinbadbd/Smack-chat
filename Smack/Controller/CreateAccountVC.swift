@@ -7,34 +7,47 @@
 //
 
 import UIKit
-
 class CreateAccountVC: UIViewController {
-
     
-    @IBOutlet weak var usernameTxt: UITextField!
-    @IBOutlet weak var emailTxt: UITextField!
-    @IBOutlet weak var passTxt: UITextField!
+    
+    //    @IBOutlet weak var usernameTxt: UITextField!
+    //    @IBOutlet weak var emailTxt: UITextField!
+    //    @IBOutlet weak var passTxt: UITextField!
+    
+    
+    
+    
+    @IBOutlet weak var UsernameText: UITextField!
+    @IBOutlet weak var UserEmailText: UITextField!
+    @IBOutlet weak var UserPasswordText: UITextField!
+    
+    
+    
+    
     
     
     @IBOutlet weak var userImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
- 
+    
     @IBAction func CreateAccount(_ sender: Any) {
-        guard let email = emailTxt.text , emailTxt.text != " " else {
+        guard let email = UserEmailText.text , UserEmailText.text != " " else {
+            print("email")
             return
         }
-        guard let pass = passTxt.text , passTxt.text != " " else {
+        guard let pass = UserPasswordText.text , UserPasswordText.text != " " else {
+            print("pass")
             return
         }
         
-        AuthService.instance.registerUser(email: email, password: pass) { (success  ) in
+        
+        AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("register User")
+                print("registered user!")
             }
         }
         
@@ -49,7 +62,7 @@ class CreateAccountVC: UIViewController {
     @IBAction func CLoseCreateAccount(_ sender: Any) {
         performSegue(withIdentifier: UNWINE, sender: nil)
     }
-  
-
-
+    
+    
+    
 }
