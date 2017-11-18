@@ -208,13 +208,13 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-bW-F4L">
-                                <rect key="frame" x="82" y="282" width="250" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-bW-F4L" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
+                                <rect key="frame" x="82" y="282" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="TsJ-r6-IGr"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -348,7 +348,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IHf-fa-LNU">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-PS-X1i">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTR-PS-X1i" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
