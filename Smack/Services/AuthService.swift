@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 class AuthService {
     
     static let instance = AuthService()
@@ -46,9 +47,7 @@ class AuthService {
     
     func registerUser(email : String, password: String, completion: @escaping CompletionHandler) {
         let lowerCaseEmail = email.lowercased()
-        let HEADERS = [
-            "Content-Type" : "application/json"
-        ]
+       
 
         let body: [String: Any] = [
             "email": lowerCaseEmail,
@@ -69,9 +68,7 @@ class AuthService {
     
     func login(email: String, password: String, completion: @escaping CompletionHandler){
         let lowerCaseEmail = email.lowercased()
-        let HEADERS = [
-            "Content-Type" : "application/json"
-        ]
+        
 
         let body: [String: Any] = [
             "email": lowerCaseEmail,
@@ -102,6 +99,60 @@ class AuthService {
             }
         }
     }
+    
+    // Create User
+    func createUser(name: String, email: String, avatarName:String, avatarColor: String, completion: @escaping CompletionHandler){
+        let email = email.lowercased()
+        
+        let body: [String: Any] = [
+            "name": name,
+            "email": email,
+            "avatarName": avatarName,
+            "avatarColor":avatarColor
+        ]
+        
+        let header = [
+            "Authorization"  : "Bearer \(AuthService.instance.authToken)",
+            "Content-Type" : "application/json"
+        ]
+        
+        Alamofire.request(URL_CREATE_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                guard let data = response.data else {return}
+                //let json = JSON(data: data)
+                let json = try! JSON(data: data)
+                let id = json["_id"].stringValue
+                let color = json["avatarColor"].stringValue
+                let avatarName = json["avatarName"].stringValue
+                let email = json["email"].stringValue
+                let name = json["name"].stringValue
+                
+                
+                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                completion(true)
+            }else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

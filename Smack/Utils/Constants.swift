@@ -15,7 +15,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let BASE_URL = "https://smartsmackchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
-
+let URL_CREATE_ADD = "\(BASE_URL)user/add"
 
 
 let TO_LOGIN = "toLogin"
@@ -30,7 +30,7 @@ let LOGGED_IN_KEY = "LOGGED_IN_KEY"
 let USER_EMAIL = "userEmail"
 
 // Header
-//let HEADERS = [
-//    "Content-Type" : "application/json"
-//]
+let HEADERS = [
+    "Content-Type" : "application/json"
+]
 
