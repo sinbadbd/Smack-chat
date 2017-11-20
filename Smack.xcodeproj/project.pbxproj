@@ -14,6 +14,8 @@
 		1D9B5B331FB6D919005FC4A3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B321FB6D919005FC4A3 /* SWRevealViewController.m */; };
 		1D9B5B391FB6E101005FC4A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B381FB6E101005FC4A3 /* GradientView.swift */; };
 		1D9B5B3C1FB6FA5A005FC4A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B3B1FB6FA5A005FC4A3 /* Constants.swift */; };
+		1DA073B01FC3379300EB01E3 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA073AF1FC3379300EB01E3 /* AvatarPickerVC.swift */; };
+		1DA073B21FC3424F00EB01E3 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA073B11FC3424F00EB01E3 /* AvatarCell.swift */; };
 		1DAA48011FBB4D6B00719F5C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA48001FBB4D6B00719F5C /* AuthService.swift */; };
 		1DB470161FBF9A2A0003B025 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB470151FBF9A290003B025 /* RoundedButton.swift */; };
 		2F34E62708C8523E3B148AB2 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */; };
@@ -34,6 +36,8 @@
 		1D9B5B321FB6D919005FC4A3 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../attached_files/054-intro-to-chat-app/Smack Assets 2/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		1D9B5B381FB6E101005FC4A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1D9B5B3B1FB6FA5A005FC4A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1DA073AF1FC3379300EB01E3 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		1DA073B11FC3424F00EB01E3 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		1DAA48001FBB4D6B00719F5C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1DB470151FBF9A290003B025 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,7 @@
 			children = (
 				1D9B5B381FB6E101005FC4A3 /* GradientView.swift */,
 				1DB470151FBF9A290003B025 /* RoundedButton.swift */,
+				1DA073B11FC3424F00EB01E3 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				F932BF481F19AB5200EBDCFC /* ChannelVC.swift */,
 				1D7841771FB763A50022BB20 /* LoginVC.swift */,
 				1D7841791FB7772C0022BB20 /* CreateAccountVC.swift */,
+				1DA073AF1FC3379300EB01E3 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			files = (
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
 				1DB470161FBF9A2A0003B025 /* RoundedButton.swift in Sources */,
+				1DA073B21FC3424F00EB01E3 /* AvatarCell.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
 				1D30D9A71FC09C09004E98BD /* AlertDialog.swift in Sources */,
 				1D78417A1FB7772C0022BB20 /* CreateAccountVC.swift in Sources */,
@@ -317,6 +324,7 @@
 				1D9B5B331FB6D919005FC4A3 /* SWRevealViewController.m in Sources */,
 				F932BF2D1F19A88100EBDCFC /* AppDelegate.swift in Sources */,
 				1D9B5B3C1FB6FA5A005FC4A3 /* Constants.swift in Sources */,
+				1DA073B01FC3379300EB01E3 /* AvatarPickerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

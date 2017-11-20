@@ -17,11 +17,11 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_CREATE_ADD = "\(BASE_URL)user/add"
 
-
+//segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWINE = "unwineToChannel"
-
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
 
 //User Defaults
