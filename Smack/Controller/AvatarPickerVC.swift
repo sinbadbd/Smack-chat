@@ -9,22 +9,29 @@
 import UIKit
 
 class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentControll: UISegmentedControl!
+    
+    
+    //Variables
+    var avatarType = AvaterType.dark
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
-        return cell
+            cell.congfigureCell(index: indexPath.item, type: avatarType)
+            return cell
         }
         return AvatarCell()
     }
@@ -37,7 +44,7 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func segmentControllChange(_ sender: Any) {
     }
     @IBAction func backPressed(_ sender: Any) {
-         dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     
