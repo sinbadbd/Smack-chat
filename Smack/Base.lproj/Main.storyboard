@@ -417,6 +417,7 @@
                         <outlet property="UserEmailText" destination="aKo-9Z-dtE" id="4lO-Us-Zaa"/>
                         <outlet property="UserPasswordText" destination="opZ-14-x89" id="uqM-Gf-Jvl"/>
                         <outlet property="UsernameText" destination="WpJ-nL-Ynw" id="6VS-oa-Fa3"/>
+                        <outlet property="userImg" destination="CIJ-hY-qrr" id="7iG-zz-GSK"/>
                         <segue destination="CD4-he-fZY" kind="unwind" identifier="unwineToChannel" unwindAction="prepareForUnwindWithSegue:" id="tIf-xO-o5X"/>
                         <segue destination="YGW-b7-c9i" kind="show" identifier="toAvatarPicker" id="YJL-4S-z6m"/>
                     </connections>

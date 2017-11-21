@@ -24,15 +24,21 @@ class CreateAccountVC: UIViewController {
     var avatarName = "profileDefault"
     var avatarColor = "[0.5,0.5,0.5,1]"
     
-    
-    
+    //@IBOutlet weak var userImg: UIImageView!
     
     @IBOutlet weak var userImg: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    // This function worked, when select avatar item. And set the createAccountVC.
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
     }
     
     @IBAction func CreateAccount(_ sender: Any) {
