@@ -25,6 +25,7 @@ class CreateAccountVC: UIViewController {
     var avatarName = "profileDefault"
     var avatarColor = "[0.5,0.5,0.5,1]"
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     var bgColor : UIColor?
     
     override func viewDidLoad() {
@@ -47,6 +48,8 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func CreateAccount(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.stopAnimating()
         guard let name = UsernameText.text, UsernameText.text != "" else {return}
         guard let email = UserEmailText.text , UserEmailText.text != " " else {
             print("email")
@@ -66,7 +69,8 @@ class CreateAccountVC: UIViewController {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             print("add user")
                             if success {
-                                print(UserDataService.instance.name, UserDataService.instance.avatarName)
+                                self.spinner.isHidden = true
+                                self.spinner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWINE, sender: nil )
                             }
                         })
@@ -102,9 +106,9 @@ class CreateAccountVC: UIViewController {
     
     // set
     func setupViewPlaceHolderColor(){
+        spinner.isHidden = true
         UsernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
         UserEmailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
         UserPasswordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
     }
-    
 }

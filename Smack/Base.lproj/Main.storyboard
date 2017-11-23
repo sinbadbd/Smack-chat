@@ -400,9 +400,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-iZ-N0S">
+                                <rect key="frame" x="189" y="250" width="37" height="37"/>
+                                <color key="color" red="0.0020431046070000002" green="0.54018368059999999" blue="0.98518797589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YXp-iZ-N0S" firstAttribute="centerY" secondItem="zDV-k7-KMp" secondAttribute="centerY" constant="-100" id="91y-sk-w9G"/>
                             <constraint firstItem="iyB-9w-Yec" firstAttribute="top" secondItem="ppJ-J2-dKJ" secondAttribute="bottom" constant="37" id="Gfw-eU-qqU"/>
                             <constraint firstItem="ppJ-J2-dKJ" firstAttribute="top" secondItem="Ope-Ja-28m" secondAttribute="bottom" constant="55.670000000000002" id="Qqe-Nj-hoW"/>
                             <constraint firstItem="oRm-0F-MpO" firstAttribute="top" secondItem="Kr0-sb-Pov" secondAttribute="bottom" constant="17" id="ZTs-Wf-xI0"/>
@@ -411,12 +416,14 @@
                             <constraint firstItem="ppJ-J2-dKJ" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="iRr-Cf-raO"/>
                             <constraint firstItem="Ope-Ja-28m" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="qTF-HX-TAj"/>
                             <constraint firstItem="iyB-9w-Yec" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="sd2-4B-aBl"/>
+                            <constraint firstItem="YXp-iZ-N0S" firstAttribute="centerX" secondItem="zDV-k7-KMp" secondAttribute="centerX" id="zCr-Db-lrd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="UserEmailText" destination="aKo-9Z-dtE" id="4lO-Us-Zaa"/>
                         <outlet property="UserPasswordText" destination="opZ-14-x89" id="uqM-Gf-Jvl"/>
                         <outlet property="UsernameText" destination="WpJ-nL-Ynw" id="6VS-oa-Fa3"/>
+                        <outlet property="spinner" destination="YXp-iZ-N0S" id="wDM-pA-PMw"/>
                         <outlet property="userImg" destination="CIJ-hY-qrr" id="7iG-zz-GSK"/>
                         <segue destination="CD4-he-fZY" kind="unwind" identifier="unwineToChannel" unwindAction="prepareForUnwindWithSegue:" id="tIf-xO-o5X"/>
                         <segue destination="YGW-b7-c9i" kind="show" identifier="toAvatarPicker" id="YJL-4S-z6m"/>
