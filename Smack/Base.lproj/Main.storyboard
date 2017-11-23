@@ -76,7 +76,7 @@
                                     <action selector="LoginBtnPressed:" destination="Ow0-oB-sKE" eventType="touchUpInside" id="IgM-ED-k4R"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-NV-NSx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-NV-NSx" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="8" y="641" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="dOA-an-T9U"/>
@@ -369,7 +369,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iyB-9w-Yec">
                                 <rect key="frame" x="122.66666666666669" y="321" width="169" height="158"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-hY-qrr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-hY-qrr" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="34.666666666666671" y="0.0" width="99.999999999999957" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="0Ds-Er-9bM"/>

@@ -89,8 +89,9 @@ class CreateAccountVC: UIViewController {
         let b = CGFloat(arc4random_uniform(255)) / 255
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
-        self.userImg.backgroundColor = bgColor
-        
+        UIImageView.animate(withDuration: 0.5){
+            self.userImg.backgroundColor = self.bgColor
+        }
     }
     
     @IBAction func CLoseCreateAccount(_ sender: Any) {
