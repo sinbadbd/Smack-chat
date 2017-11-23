@@ -110,5 +110,13 @@ class CreateAccountVC: UIViewController {
         UsernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
         UserEmailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
         UserPasswordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
+        
+        //Handle keyboard
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.hangleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hangleTap(){
+        view.endEditing(true)
     }
 }
