@@ -23,6 +23,8 @@ let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWINE = "unwineToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 
+//Colors
+ let smackPurplePlace =  #colorLiteral(red: 0.002043104607, green: 0.5401836806, blue: 0.9851879759, alpha: 0.5)
 
 //User Defaults
 let TOKEN_KEY = "token"

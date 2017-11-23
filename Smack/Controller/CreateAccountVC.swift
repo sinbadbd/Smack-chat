@@ -29,6 +29,7 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewPlaceHolderColor();
     }
     
     
@@ -99,5 +100,11 @@ class CreateAccountVC: UIViewController {
     }
     
     
+    // set
+    func setupViewPlaceHolderColor(){
+        UsernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
+        UserEmailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
+        UserPasswordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlace])
+    }
     
 }
