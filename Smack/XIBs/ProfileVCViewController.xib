@@ -33,7 +33,7 @@
                     <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIN-3P-BLQ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIN-3P-BLQ" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                     <rect key="frame" x="20" y="203" width="374" height="330"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-4r-3ch">
@@ -43,8 +43,8 @@
                                 <action selector="closeModalPressed:" destination="-1" eventType="touchUpInside" id="rgo-SD-CZ7"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-bI-3nt">
-                            <rect key="frame" x="158.66666666666666" y="291" width="58" height="33"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-bI-3nt">
+                            <rect key="frame" x="158" y="291" width="58" height="33"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <state key="normal" title="Logout"/>
                             <connections>
@@ -60,7 +60,7 @@
                                     <color key="textColor" red="0.17254901959999999" green="0.53305983199999996" blue="0.7706699346" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-r7-YON">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-r7-YON" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                     <rect key="frame" x="72.333333333333329" y="34.333333333333314" width="100.00000000000004" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="E0e-pG-f8h"/>
@@ -85,7 +85,9 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Y05-Cw-GC4" firstAttribute="centerX" secondItem="uIN-3P-BLQ" secondAttribute="centerX" id="1EG-TD-4dL"/>
+                        <constraint firstAttribute="bottom" secondItem="Vcu-bI-3nt" secondAttribute="bottom" constant="6" id="7jA-Co-2y2"/>
                         <constraint firstItem="Y05-Cw-GC4" firstAttribute="centerY" secondItem="uIN-3P-BLQ" secondAttribute="centerY" constant="-10" id="SZO-Z3-Tuq"/>
+                        <constraint firstItem="Vcu-bI-3nt" firstAttribute="top" secondItem="Y05-Cw-GC4" secondAttribute="bottom" constant="34.670000000000002" id="V17-qb-cac"/>
                         <constraint firstItem="fKi-4r-3ch" firstAttribute="top" secondItem="uIN-3P-BLQ" secondAttribute="top" constant="8" id="eGr-2z-e9G"/>
                         <constraint firstAttribute="height" constant="330" id="oJH-Pn-DWH"/>
                         <constraint firstAttribute="trailing" secondItem="fKi-4r-3ch" secondAttribute="trailing" constant="20" id="xWr-kU-nJh"/>
@@ -93,7 +95,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uIN-3P-BLQ" secondAttribute="trailing" constant="20" id="9mu-qa-6WH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eTX-hm-Nmu" secondAttribute="trailing" id="C8Q-DB-rRb"/>
