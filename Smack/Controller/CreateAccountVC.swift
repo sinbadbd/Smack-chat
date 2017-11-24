@@ -34,7 +34,6 @@ class CreateAccountVC: UIViewController {
     }
     
     
-    
     // This function worked, when select avatar item. And set the createAccountVC.
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
@@ -95,6 +94,7 @@ class CreateAccountVC: UIViewController {
         let b = CGFloat(arc4random_uniform(255)) / 255
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        avatarColor = "[\(r), \(g), \(b)]"
         UIImageView.animate(withDuration: 0.5){
             self.userImg.backgroundColor = self.bgColor
         }

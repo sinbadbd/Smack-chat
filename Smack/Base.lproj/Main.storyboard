@@ -123,6 +123,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="8aJ-ek-CoD" id="MTT-aA-KHj"/>
+                        <outlet property="userImg" destination="kNy-NV-NSx" id="gbg-lx-aac"/>
                         <segue destination="I2U-g8-4ql" kind="show" identifier="toLogin" id="A3S-6S-Kij"/>
                     </connections>
                 </viewController>
