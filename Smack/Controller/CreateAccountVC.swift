@@ -34,7 +34,6 @@ class CreateAccountVC: UIViewController {
     }
     
     
-    
     // This function worked, when select avatar item. And set the createAccountVC.
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
