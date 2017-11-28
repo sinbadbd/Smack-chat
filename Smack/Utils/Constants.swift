@@ -16,7 +16,7 @@ let BASE_URL = "https://smartsmackchat.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_CREATE_ADD = "\(BASE_URL)user/add"
-let URL_USER_BY_EMAIL  = "\(BASE_URL)user/byEmail"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 //segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
@@ -40,7 +40,7 @@ let HEADERS = [
 ]
 
 //BEAR
-let BEARE_EHEADER = [
-    "Authorization"  : "Bearer \(AuthService.instance.authToken)",
+let BEARE_HEADER = [
+    "Authorization":"Bearer \(AuthService.instance.authToken)",
     "Content-Type" : "application/json"
 ]

@@ -113,7 +113,7 @@ class AuthService {
         
        
         
-        Alamofire.request(URL_CREATE_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARE_EHEADER).responseJSON { (response) in
+        Alamofire.request(URL_CREATE_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARE_HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
                 guard let data = response.data else {return}
@@ -131,18 +131,38 @@ class AuthService {
     //login by user emailAnyfunc finUserByEmai
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
-        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARE_EHEADER).responseJSON { (response) in
-            
+        
+//        let BEARE_HEADERs = [
+//            "Authorization"  : "Bearer \(AuthService.instance.authToken)",
+//            "Content-Type" : "application/json"
+//        ]
+        
+       // print("log....................")
+//        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARE_HEADER).responseJSON { (response) in
+//            print("log....................1111")
+//            if response.result.error == nil {
+//                guard let data = response.data else {return}
+//                self.setUserInfo(data: data)
+//                completion(true)
+//                 print("Success: \(response.result.isSuccess)")
+//                print("logged in user\(data)")
+//            }else {
+//                completion(false)
+//                debugPrint(response.result.error as Any)
+//            }
+//        }
+        
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARE_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 guard let data = response.data else {return}
                 self.setUserInfo(data: data)
                 completion(true)
-                
-            }else {
+            } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
         }
+        
     }
     
     func setUserInfo(data : Data){
