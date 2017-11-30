@@ -41,7 +41,11 @@ let HEADERS = [
 ]
 
 //BEAR
-let BEARE_HEADER = [
+//let BEARE_HEADER = [
+//    "Authorization":"Bearer \(AuthService.instance.authToken)",
+//    "Content-Type" : "application/json"
+//]
+let BEARER_HEADER = [
     "Authorization":"Bearer \(AuthService.instance.authToken)",
-    "Content-Type" : "application/json"
+    "Content-Type": "application/json; charset=utf-8"
 ]

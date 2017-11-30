@@ -113,7 +113,7 @@ class AuthService {
         
        
         
-        Alamofire.request(URL_CREATE_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARE_HEADER).responseJSON { (response) in
+        Alamofire.request(URL_CREATE_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
                 guard let data = response.data else {return}
@@ -152,17 +152,29 @@ class AuthService {
 //            }
 //        }
         
-        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARE_HEADER).responseJSON { (response) in
+//        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+//            if response.result.error == nil {
+//                guard let data = response.data else {return}
+//                self.setUserInfo(data: data)
+//                completion(true)
+//            } else {
+//                completion(false)
+//                debugPrint(response.result.error as Any)
+//            }
+//        }
+        
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(UserEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString  { (response) in
+            
             if response.result.error == nil {
-                guard let data = response.data else {return}
+                guard let data = response.data else { return }
                 self.setUserInfo(data: data)
                 completion(true)
+                
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
         }
-        
     }
     
     func setUserInfo(data : Data){
