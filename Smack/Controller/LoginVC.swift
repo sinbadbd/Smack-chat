@@ -21,7 +21,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func LoginPressedBtn(_ sender: Any) {
-        spinner.isHidden = false
+        //spinner.isHidden = false
         spinner.startAnimating()
         
         guard let email = usernameText.text, usernameText.text != "" else {return}
