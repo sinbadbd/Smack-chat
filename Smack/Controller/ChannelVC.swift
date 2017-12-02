@@ -9,9 +9,9 @@
 import UIKit
 
 class ChannelVC: UIViewController {
-//
+    //
     
-   // @IBOutlet weak var loginBtn: UIButton!
+    // @IBOutlet weak var loginBtn: UIButton!
     
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImg: CircleImage!
@@ -25,10 +25,20 @@ class ChannelVC: UIViewController {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         //Notification
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-         }
- 
+    }
+    
     @IBAction func LoginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        if AuthService.instance.isLoggedIn {
+            //show profile modal page
+            let profile = ProfileVCViewController()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+            print("login")
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+            print("go create page")
+        }
+        
     }
     
     //User loggedin then notitify. And change image & user email.

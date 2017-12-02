@@ -12,6 +12,8 @@
 		1D6623301FC5F6B40069C0AF /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66232F1FC5F6B40069C0AF /* CircleImage.swift */; };
 		1D7841781FB763A60022BB20 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7841771FB763A50022BB20 /* LoginVC.swift */; };
 		1D78417A1FB7772C0022BB20 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7841791FB7772C0022BB20 /* CreateAccountVC.swift */; };
+		1D95AAC11FC7E6B700DCB8C8 /* ProfileVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95AABF1FC7E6B700DCB8C8 /* ProfileVCViewController.swift */; };
+		1D95AAC21FC7E6B700DCB8C8 /* ProfileVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D95AAC01FC7E6B700DCB8C8 /* ProfileVCViewController.xib */; };
 		1D9B5B331FB6D919005FC4A3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B321FB6D919005FC4A3 /* SWRevealViewController.m */; };
 		1D9B5B391FB6E101005FC4A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B381FB6E101005FC4A3 /* GradientView.swift */; };
 		1D9B5B3C1FB6FA5A005FC4A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9B5B3B1FB6FA5A005FC4A3 /* Constants.swift */; };
@@ -34,6 +36,8 @@
 		1D66232F1FC5F6B40069C0AF /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		1D7841771FB763A50022BB20 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1D7841791FB7772C0022BB20 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		1D95AABF1FC7E6B700DCB8C8 /* ProfileVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCViewController.swift; sourceTree = "<group>"; };
+		1D95AAC01FC7E6B700DCB8C8 /* ProfileVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVCViewController.xib; sourceTree = "<group>"; };
 		1D9B5B311FB6D919005FC4A3 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../attached_files/054-intro-to-chat-app/Smack Assets 2/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		1D9B5B321FB6D919005FC4A3 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../attached_files/054-intro-to-chat-app/Smack Assets 2/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		1D9B5B381FB6E101005FC4A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D95AAC31FC7E78600DCB8C8 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				1D95AAC01FC7E6B700DCB8C8 /* ProfileVCViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		1D9B5B361FB6E0EA005FC4A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 		F932BF2B1F19A88100EBDCFC /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				1D95AAC31FC7E78600DCB8C8 /* XIBs */,
 				1DAA47FF1FBB4D3500719F5C /* Services */,
 				1D9B5B3A1FB6FA30005FC4A3 /* Utils */,
 				F932BF3E1F19A96200EBDCFC /* Supporting Files */,
@@ -175,6 +188,7 @@
 				1D7841771FB763A50022BB20 /* LoginVC.swift */,
 				1D7841791FB7772C0022BB20 /* CreateAccountVC.swift */,
 				1DA073AF1FC3379300EB01E3 /* AvatarPickerVC.swift */,
+				1D95AABF1FC7E6B700DCB8C8 /* ProfileVCViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F932BF371F19A88100EBDCFC /* LaunchScreen.storyboard in Resources */,
+				1D95AAC21FC7E6B700DCB8C8 /* ProfileVCViewController.xib in Resources */,
 				F932BF341F19A88100EBDCFC /* Assets.xcassets in Resources */,
 				F932BF321F19A88100EBDCFC /* Main.storyboard in Resources */,
 			);
@@ -315,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F932BF491F19AB5200EBDCFC /* ChannelVC.swift in Sources */,
+				1D95AAC11FC7E6B700DCB8C8 /* ProfileVCViewController.swift in Sources */,
 				1DB470161FBF9A2A0003B025 /* RoundedButton.swift in Sources */,
 				1DA073B21FC3424F00EB01E3 /* AvatarCell.swift in Sources */,
 				F932BF471F19AB4200EBDCFC /* ChatVC.swift in Sources */,
