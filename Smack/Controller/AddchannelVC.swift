@@ -11,6 +11,7 @@ import UIKit
 class AddchannelVC: UIViewController {
 
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var chanDest: UITextField!
@@ -24,14 +25,31 @@ class AddchannelVC: UIViewController {
 
     @IBOutlet weak var CreateChannelPressed: RoundedButton!
     
-
+    @IBAction func CreateChannel(_ sender: Any) {
+        print("create channel")
+        loading.isHidden = false
+        loading.startAnimating()
+     
+        guard let channelName = nameTextField.text, nameTextField.text != "" else {return}
+        guard let chanDes = chanDest.text else {return}
+        
+        SocketServices.instance.addChannel(channelName: channelName, channelDescription: chanDes) { (success) in
+            if success {
+                self.loading.isHidden = true
+                self.loading.stopAnimating()
+                self.dismiss(animated: true, completion: nil)                
+            }
+        }
+    
+    }
+    
     @IBAction func closeModalPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     
     func setupView(){
-        
+        loading.isHidden = true
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddchannelVC.closeTap(_:)))
         bgView.addGestureRecognizer(closeTouch)
         

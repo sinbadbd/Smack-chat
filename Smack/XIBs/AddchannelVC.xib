@@ -20,6 +20,7 @@
                 <outlet property="CreateChannelPressed" destination="ubD-af-rAM" id="L4M-7r-NqA"/>
                 <outlet property="bgView" destination="UFo-7l-1rq" id="0ND-1o-gsU"/>
                 <outlet property="chanDest" destination="903-HI-6jX" id="7c0-Ho-Hvf"/>
+                <outlet property="loading" destination="Zrw-Vz-GDT" id="36o-4T-ibJ"/>
                 <outlet property="nameTextField" destination="8nN-mQ-qmk" id="aev-sG-9yF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -105,10 +106,19 @@
                                     <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="CreateChannel:" destination="-1" eventType="touchUpInside" id="rMG-9x-GDZ"/>
+                            </connections>
                         </button>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Zrw-Vz-GDT">
+                            <rect key="frame" x="121.5" y="147.5" width="37" height="37"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="color" red="0.17254901959999999" green="0.53305983199999996" blue="0.7706699346" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="Zrw-Vz-GDT" firstAttribute="centerY" secondItem="VCi-4T-OZJ" secondAttribute="centerY" id="3Rb-sC-ybV"/>
                         <constraint firstItem="Xet-Wo-seW" firstAttribute="centerX" secondItem="VCi-4T-OZJ" secondAttribute="centerX" id="7me-Mi-tni"/>
                         <constraint firstAttribute="bottom" secondItem="ubD-af-rAM" secondAttribute="bottom" constant="20" id="8tT-db-VR3"/>
                         <constraint firstItem="ubD-af-rAM" firstAttribute="centerX" secondItem="VCi-4T-OZJ" secondAttribute="centerX" id="DjF-Nb-RLN"/>
@@ -119,6 +129,7 @@
                         <constraint firstAttribute="bottom" secondItem="ubD-af-rAM" secondAttribute="bottom" constant="30" id="eC2-ZG-7ax"/>
                         <constraint firstAttribute="trailing" secondItem="9fS-AW-TjS" secondAttribute="trailing" constant="8" id="kwz-Tc-vse"/>
                         <constraint firstItem="ubD-af-rAM" firstAttribute="top" secondItem="2AE-hR-N52" secondAttribute="bottom" constant="83" id="rcH-xV-OX8"/>
+                        <constraint firstItem="Zrw-Vz-GDT" firstAttribute="centerX" secondItem="VCi-4T-OZJ" secondAttribute="centerX" id="yam-Sq-35k"/>
                     </constraints>
                 </view>
             </subviews>
