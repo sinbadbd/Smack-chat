@@ -67,8 +67,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" " image="addChannelButton"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aJ-ek-CoD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aJ-ek-CoD">
                                 <rect key="frame" x="103" y="663.66666666666663" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -76,54 +77,45 @@
                                     <action selector="LoginBtnPressed:" destination="Ow0-oB-sKE" eventType="touchUpInside" id="IgM-ED-k4R"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-NV-NSx" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kNy-NV-NSx" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="8" y="641" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="dOA-an-T9U"/>
-                                    <constraint firstAttribute="width" constant="75" id="gKJ-Fk-KFN"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uv9-d3-bcN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uv9-d3-bcN">
                                 <rect key="frame" x="0.0" y="104" width="414" height="529"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="qGi-7B-fra">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="70" id="qGi-7B-fra" customClass="ChannelCell" customModule="Smack">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qGi-7B-fra" id="2IY-7z-Gak">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-nC-0Ym">
-                                                    <rect key="frame" x="16" y="25" width="82" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#general" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7J-nC-0Ym">
+                                                    <rect key="frame" x="16" y="25" width="374" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Q7J-nC-0Ym" secondAttribute="trailing" constant="308" id="LrR-c4-vCg"/>
-                                                <constraint firstItem="Q7J-nC-0Ym" firstAttribute="leading" secondItem="2IY-7z-Gak" secondAttribute="leadingMargin" constant="8" id="sWh-jW-1Ub"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="Q7J-nC-0Ym" id="hKb-37-guB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IGw-6G-1Vo" firstAttribute="top" secondItem="kNy-NV-NSx" secondAttribute="bottom" constant="20" id="2o5-M5-iK3"/>
-                            <constraint firstItem="8aJ-ek-CoD" firstAttribute="leading" secondItem="kNy-NV-NSx" secondAttribute="trailing" constant="20" id="4y7-8v-eI2"/>
-                            <constraint firstItem="8aJ-ek-CoD" firstAttribute="centerY" secondItem="kNy-NV-NSx" secondAttribute="centerY" id="Kp2-g3-fBS"/>
-                            <constraint firstItem="Uv9-d3-bcN" firstAttribute="leading" secondItem="cUM-iV-QVM" secondAttribute="leading" id="N3d-hg-fWJ"/>
-                            <constraint firstItem="kNy-NV-NSx" firstAttribute="leading" secondItem="cUM-iV-QVM" secondAttribute="leading" constant="8" id="hUP-Zb-Fpb"/>
-                            <constraint firstAttribute="trailing" secondItem="Uv9-d3-bcN" secondAttribute="trailing" id="ktz-qm-VnO"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="8aJ-ek-CoD" id="MTT-aA-KHj"/>
+                        <outlet property="tableView" destination="Uv9-d3-bcN" id="BWK-dG-tYu"/>
                         <outlet property="userImg" destination="kNy-NV-NSx" id="gbg-lx-aac"/>
                         <segue destination="I2U-g8-4ql" kind="show" identifier="toLogin" id="A3S-6S-Kij"/>
                     </connections>
