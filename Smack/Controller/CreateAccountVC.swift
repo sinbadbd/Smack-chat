@@ -34,7 +34,6 @@ class CreateAccountVC: UIViewController {
     }
     
     
-    
     // This function worked, when select avatar item. And set the createAccountVC.
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
@@ -72,6 +71,7 @@ class CreateAccountVC: UIViewController {
                                 self.spinner.isHidden = true
                                 self.spinner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWINE, sender: nil )
+                               NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                             }
                         })
                     }
@@ -94,6 +94,7 @@ class CreateAccountVC: UIViewController {
         let b = CGFloat(arc4random_uniform(255)) / 255
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        avatarColor = "[\(r), \(g), \(b)]"
         UIImageView.animate(withDuration: 0.5){
             self.userImg.backgroundColor = self.bgColor
         }
