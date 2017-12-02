@@ -144,6 +144,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Mt1-bx-maK">
+                                <rect key="frame" x="188.66666666666666" y="227" width="37" height="37"/>
+                                <color key="color" red="0.0020431046070000002" green="0.54018368059999999" blue="0.98518797589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwc-ry-ymV">
                                 <rect key="frame" x="331" y="28" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
@@ -169,7 +173,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="wuz-Qs-wm6">
                                 <rect key="frame" x="82" y="145" width="250" height="82"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-zs-hgp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-zs-hgp">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="dHH-pK-J9S"/>
@@ -190,7 +194,7 @@
                                             <constraint firstAttribute="width" constant="250" id="dUI-BX-ew2"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp3-9l-k89">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp3-9l-k89">
                                         <rect key="frame" x="0.0" y="48" width="250" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="bkv-Fx-Vq1"/>
@@ -219,9 +223,12 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginPressedBtn:" destination="I2U-g8-4ql" eventType="touchUpInside" id="35U-cG-lDE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq7-oy-gLQ">
-                                <rect key="frame" x="82.666666666666686" y="335" width="250" height="29"/>
+                                <rect key="frame" x="82" y="335" width="250" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="CQL-U0-dzb"/>
                                 </constraints>
@@ -233,6 +240,9 @@
                                     <action selector="createAccountBtnPressed:" destination="I2U-g8-4ql" eventType="touchUpInside" id="kfi-Fh-szu"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-qZ-Wq0">
+                                <rect key="frame" x="189" y="349.66666666666669" width="37" height="37"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -250,10 +260,15 @@
                             <constraint firstItem="wuz-Qs-wm6" firstAttribute="centerX" secondItem="Bf1-MT-cDx" secondAttribute="centerX" id="bwt-7w-Ngv"/>
                             <constraint firstItem="iwc-ry-ymV" firstAttribute="top" secondItem="l0A-kB-WIg" secondAttribute="bottom" constant="8" id="cMg-i2-3wU"/>
                             <constraint firstItem="wGH-2n-Xes" firstAttribute="centerX" secondItem="Bf1-MT-cDx" secondAttribute="centerX" id="etd-J6-8ak"/>
+                            <constraint firstItem="Mt1-bx-maK" firstAttribute="centerX" secondItem="Bf1-MT-cDx" secondAttribute="centerX" id="lcd-w5-j9Y"/>
+                            <constraint firstItem="3ba-qZ-Wq0" firstAttribute="centerX" secondItem="Bf1-MT-cDx" secondAttribute="centerX" id="oYT-7h-lpi"/>
                             <constraint firstItem="iwc-ry-ymV" firstAttribute="leading" secondItem="Bf1-MT-cDx" secondAttribute="leadingMargin" constant="311" id="tbi-gL-6Hw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordText" destination="mp3-9l-k89" id="s3c-S1-IZS"/>
+                        <outlet property="spinner" destination="Mt1-bx-maK" id="ytY-HL-bHH"/>
+                        <outlet property="usernameText" destination="xEM-zs-hgp" id="ifg-F4-Y91"/>
                         <segue destination="SSi-tR-TEY" kind="show" identifier="toCreateAccount" id="YKP-RC-H3R"/>
                     </connections>
                 </viewController>
@@ -365,6 +380,10 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kTR-PS-X1i" secondAttribute="bottom" id="moH-4n-o7a"/>
+                                            <constraint firstAttribute="bottom" secondItem="kTR-PS-X1i" secondAttribute="bottom" id="te5-4l-2IM"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -403,7 +422,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-iZ-N0S">
-                                <rect key="frame" x="189" y="250" width="37" height="37"/>
+                                <rect key="frame" x="188.66666666666666" y="249.66666666666669" width="37" height="37.000000000000057"/>
                                 <color key="color" red="0.0020431046070000002" green="0.54018368059999999" blue="0.98518797589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -460,7 +479,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-eP-Uhv">
-                                <rect key="frame" x="127.66666666666669" y="28" width="160" height="29"/>
+                                <rect key="frame" x="127" y="28" width="160" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="7Mk-Qh-vKa"/>
                                 </constraints>
