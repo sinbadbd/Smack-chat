@@ -24,7 +24,7 @@ class ChannelCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         if selected {
-            self.layer.backgroundColor = UIColor(white: 1, alpha: 0.2).cgColor
+            self.layer.backgroundColor = UIColor(white: 1, alpha: 0.5).cgColor
         } else {
             self.layer.backgroundColor = UIColor.clear.cgColor
         }
@@ -34,7 +34,7 @@ class ChannelCell: UITableViewCell {
     func configureCell(channel : Channel) {
         let title = channel.channelTile ?? ""
         
-        channelName.text = title
+        channelName.text = "#\(title) "
         
     }
 
