@@ -66,6 +66,9 @@
                                 <rect key="frame" x="276" y="61" width="27" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" " image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannel:" destination="Ow0-oB-sKE" eventType="touchUpInside" id="mu0-07-LCr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aJ-ek-CoD">
                                 <rect key="frame" x="103" y="663.66666666666663" width="38" height="30"/>

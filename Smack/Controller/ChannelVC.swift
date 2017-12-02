@@ -27,7 +27,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource  = self
         
         
-       self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+        self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         //Notification
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
@@ -58,6 +58,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             userImg.image = UIImage(named: "menuProfileIcon")
             //userImg.backgroundColor = UIColor.clear
         }
+    }
+    
+    @IBAction func addChannel(_ sender: Any) {
+        let addChannel = AddchannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
