@@ -31,6 +31,8 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewPlaceHolderColor();
+        
+        UserPasswordText.isSecureTextEntry = true
     }
     
     

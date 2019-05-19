@@ -27,7 +27,7 @@
 		1DAA48011FBB4D6B00719F5C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA48001FBB4D6B00719F5C /* AuthService.swift */; };
 		1DB470161FBF9A2A0003B025 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB470151FBF9A290003B025 /* RoundedButton.swift */; };
 		2F34E62708C8523E3B148AB2 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */; };
-		A116BE492255B6E800A1D9C9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A116BE482255B6E800A1D9C9 /* SWRevealViewController.m */; };
+		A16124E32291ADF600F1DFB9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16124E22291ADF500F1DFB9 /* SWRevealViewController.m */; };
 		F932BF2D1F19A88100EBDCFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932BF2C1F19A88100EBDCFC /* AppDelegate.swift */; };
 		F932BF321F19A88100EBDCFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F932BF301F19A88100EBDCFC /* Main.storyboard */; };
 		F932BF341F19A88100EBDCFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F932BF331F19A88100EBDCFC /* Assets.xcassets */; };
@@ -58,8 +58,8 @@
 		1DB470151FBF9A290003B025 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3533BA0C4C1F17B8A7E6890A /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744F8A72AFC8AF2A24103AF0 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
-		A116BE472255B6E700A1D9C9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		A116BE482255B6E800A1D9C9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		A16124E12291ADCA00F1DFB9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A16124E22291ADF500F1DFB9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		BA85681A27A560F56CCC0CB4 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		F932BF291F19A88100EBDCFC /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F932BF2C1F19A88100EBDCFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 		F932BF3E1F19A96200EBDCFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A116BE472255B6E700A1D9C9 /* SWRevealViewController.h */,
-				A116BE482255B6E800A1D9C9 /* SWRevealViewController.m */,
+				A16124E22291ADF500F1DFB9 /* SWRevealViewController.m */,
+				A16124E12291ADCA00F1DFB9 /* SWRevealViewController.h */,
 				F932BF3F1F19A97000EBDCFC /* Smack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
@@ -350,7 +350,7 @@
 				1D7D4C631FD133590045321D /* SocketServices.swift in Sources */,
 				F932BF2D1F19A88100EBDCFC /* AppDelegate.swift in Sources */,
 				1D9B5B3C1FB6FA5A005FC4A3 /* Constants.swift in Sources */,
-				A116BE492255B6E800A1D9C9 /* SWRevealViewController.m in Sources */,
+				A16124E32291ADF600F1DFB9 /* SWRevealViewController.m in Sources */,
 				1DA073B01FC3379300EB01E3 /* AvatarPickerVC.swift in Sources */,
 				1D6623301FC5F6B40069C0AF /* CircleImage.swift in Sources */,
 			);

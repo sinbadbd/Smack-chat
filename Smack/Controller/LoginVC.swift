@@ -18,6 +18,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginView()
+        
+        passwordText.isSecureTextEntry = true
     }
     
     @IBAction func LoginPressedBtn(_ sender: Any) {
