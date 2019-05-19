@@ -6,7 +6,7 @@
 **Alamofire**
 **Sockets** <a href="https://github.com/socketio/socket.io-client-swift">socketio</a>
 
-- Alamofire with Authuntication
+- Alamofire with Authentication
 - Register/Login
 - Create user / Profile
 - Add Channel  
