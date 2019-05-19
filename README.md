@@ -3,8 +3,8 @@
 **SMACK** is a chat application. Which is based on RestApi.
 
 **USE**
-**Alamofire**
-**Sockets** <a href="https://github.com/socketio/socket.io-client-swift">socketio</a>
+- **Alamofire**
+- **Sockets** <a href="https://github.com/socketio/socket.io-client-swift">socketio</a>
 
 - Alamofire with Authentication
 - Register/Login
